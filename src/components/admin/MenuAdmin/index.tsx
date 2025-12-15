@@ -27,7 +27,7 @@ export function MenuAdmin() {
   );
   const linkClasses = clsx(
     '[&>svg]:w-[16px] [&>svg]:h-[16px] px-4',
-    'flex items-center gap-2 cursor-pointer',
+    'flex items-center gap-2 cursor-pointer rounded-lg',
     'trasition hover:bg-slate-700',
     'h-10 shrink-0',
   );
