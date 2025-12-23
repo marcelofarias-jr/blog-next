@@ -16,11 +16,11 @@ export const metadata: Metadata = {
 type RootLayoutProps = {
   children: React.ReactNode;
 };
-
+//aqui
 export default function RootLayout({ children }: Readonly<RootLayoutProps>) {
   return (
     <html lang='pt-BR'>
-      <body>
+      <body cz-shortcut-listen='true'>
         <Container>
           <Header />
 

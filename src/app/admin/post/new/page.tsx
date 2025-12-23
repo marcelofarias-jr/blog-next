@@ -2,6 +2,10 @@ import { ManagePostForm } from '@/components/admin/ManagePostForm';
 
 export const dynamic = 'force-dynamic';
 
+export const metadata = {
+  title: 'Criar novo post - Admin',
+};
+
 export default async function AdminPostNewPage() {
   return (
     <>
