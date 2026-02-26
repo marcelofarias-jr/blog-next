@@ -10,7 +10,7 @@ import { PostUpdateSchema } from '@/lib/post/validations';
 import { postRepository } from '@/repositories/post';
 import { getZodErrorMessages } from '@/utils/get-zod-error-messages';
 import { makeRandomString } from '@/utils/make-random-string';
-import { revalidateTag } from 'next/cache';
+import { revalidatePath, revalidateTag } from 'next/cache';
 
 type UpdatePostActionState = {
   formState: PublicPost;
@@ -82,6 +82,8 @@ export async function updatePostAction(
 
   revalidateTag('posts');
   revalidateTag(`post-${post.slug}`);
+  revalidatePath('/', 'page');
+  revalidatePath('/post/[slug]', 'page');
 
   return {
     formState: makePublicPostFromDb(post),

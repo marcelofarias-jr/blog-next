@@ -1,5 +1,5 @@
-import { isUrlOrRelativePath } from '@/utils/is-url-or-relative-path';
 import sanitizeHtml from 'sanitize-html';
+import { isUrlOrRelativePath } from '@/utils/is-url-or-relative-path';
 import { z } from 'zod';
 
 const PostBaseSchema = z.object({
