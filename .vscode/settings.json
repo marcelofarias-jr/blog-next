@@ -4,11 +4,10 @@
   "workbench.sideBar.fontSize": 30,
   "chat.editor.fontSize": 28,
   "breadcrumbs.enabled": false,
-  "editor.fontSize": 20,
+  "editor.fontSize": 14,
   "debug.console.fontSize": 26,
-  "terminal.integrated.fontSize": 24,
+  "terminal.integrated.fontSize": 14,
   "editor.glyphMargin": false,
-  "workbench.activityBar.location": "left",
   "workbench.sideBar.visible": true,
   "editor.lineNumbers": "on",
   "files.eol": "\n", // Final de linha sempre será LF
