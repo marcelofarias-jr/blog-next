@@ -22,7 +22,7 @@
     "drizzle-orm": "^0.41.0",
     "jose": "^6.0.10",
     "lucide-react": "^0.488.0",
-    "next": "latest",
+    "next": "16.2.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-markdown": "^10.1.0",
@@ -45,7 +45,7 @@
     "@types/sanitize-html": "^2.15.0",
     "drizzle-kit": "^0.30.6",
     "eslint": "^9",
-    "eslint-config-next": "latest",
+    "eslint-config-next": "16.2.2",
     "tailwindcss": "^4",
     "tsx": "^4.19.3",
     "typescript": "^5"
