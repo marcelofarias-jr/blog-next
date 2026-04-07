@@ -1,4 +1,13 @@
 import { drizzleDb } from '@/db/drizzle';
 import { migrate } from 'drizzle-orm/better-sqlite3/migrator';
+import { resolve } from 'path';
 
-migrate(drizzleDb, { migrationsFolder: './drizzle' });
+const migrationsFolder = resolve(
+  process.cwd(),
+  'src',
+  'db',
+  'drizzle',
+  'migrations',
+);
+
+migrate(drizzleDb, { migrationsFolder });
