@@ -73,7 +73,7 @@ export async function createPostAction(
     };
   }
 
-  revalidateTag('posts');
+  revalidateTag('posts', 'max');
   revalidatePath('/', 'page');
   revalidatePath('/post/[slug]', 'page');
   redirect(`/admin/post/${newPost.id}?created=1`);
