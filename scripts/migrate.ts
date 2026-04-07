@@ -1,5 +1,5 @@
 import { drizzleDb } from '@/db/drizzle';
-import { migrate } from 'drizzle-orm/better-sqlite3/migrator';
+import { migrate } from 'drizzle-orm/libsql/migrator';
 import { resolve } from 'path';
 
 const migrationsFolder = resolve(
@@ -10,4 +10,4 @@ const migrationsFolder = resolve(
   'migrations',
 );
 
-migrate(drizzleDb, { migrationsFolder });
+await migrate(drizzleDb, { migrationsFolder });

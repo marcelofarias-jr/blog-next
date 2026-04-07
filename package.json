@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prebuild": "npm run db:generate && npm run db:migrate",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx scripts/migrate.ts",
     "build": "next build",
@@ -14,9 +13,9 @@
     "seed": "tsx src/db/drizzle/seed.ts"
   },
   "dependencies": {
+    "@libsql/client": "^0.17.2",
     "@uiw/react-md-editor": "^4.0.5",
     "bcryptjs": "^3.0.2",
-    "better-sqlite3": "^11.9.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "drizzle-orm": "^0.41.0",
@@ -38,7 +37,6 @@
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "@tailwindcss/typography": "^0.5.16",
-    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
