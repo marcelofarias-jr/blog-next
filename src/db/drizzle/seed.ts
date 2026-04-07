@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { JsonPostRepository } from '@/repositories/post/json-post-repository';
 import { drizzleDb } from '.';
 import { postsTable } from './schemas';
