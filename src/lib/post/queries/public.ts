@@ -6,7 +6,17 @@ import { cache } from 'react';
 export const findAllPublicPostsCached = cache(
   unstable_cache(
     async () => {
-      return await postRepository.findAllPublic();
+      try {
+        return await postRepository.findAllPublic();
+      } catch (error) {
+        if (error instanceof Error) {
+          if (error.message.includes('no such table: posts')) {
+            return [];
+          }
+        }
+
+        throw error;
+      }
     },
     ['posts'],
     {
